@@ -654,7 +654,7 @@ ret=add(1,3)
 print(ret)
 
 funcs = [lambda x:x+'.pptx', lambda x:x+'docx']
-ret1 = funcs[0]('Intro')
+ret1 = funcs[0]('intro')
 ret2 = funcs[1]('Report')
 print(ret1)
 print(ret2)
