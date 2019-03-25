@@ -1,0 +1,1 @@
+Simple linear regression is the most commonly used technique for ..... relationship between the correlation coefficient, r, the regression slope, b, and the.

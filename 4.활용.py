@@ -366,17 +366,17 @@ for query in queries :
 # 스택은 데이터를 임시로 저장하는 공간
 # 스택은 나중에 저장된 것이 먼저 추출되는 형식으로 동작함
     
-mystack = []
+mystack = []  # 빈 리스트를 정의
 
-def putdata(data):
-    global mystack
-    mystack.append(data)
+def putdata(data):       # data 쌓는 함수
+    global mystack       # 전역변수 mystack을 global을 이용해서 사용
+    mystack.append(data) # data를 mystack의 요소로 추가
     
-def popdata():
+def popdata():           # 데이터를 추출하는 함수
     global mystack
-    if len(mystack) == 0:
+    if len(mystack) == 0: 
         return None
-    return mystack.pop()
+    return mystack.pop() 
 
 putdata('데이터1')
 putdata([3,4,5,6])
@@ -384,25 +384,44 @@ putdata(12345)
 
 print('<스택상태>:',end='');print(mystack)
 
-ret = popdata()
+ret = popdata() # popdata() 호출
 while ret != None :
     print('스택에서 데이터 추출:',end='');print(ret)
     print('<스택상태>:',end='');print(mystack)
     ret = popdata()
 
 
+#%% 166 문장에 나타나는 문자 빈도수 계산하기
+def getTextFreq(filename):
+    with open(filename,'r') as f:
+        text = f.read()
+        fa = {}
+        for c in text :       # 신기하네... 문자를 하나씩 추출 ? 
+            if c in fa :      # 그 문자가 키로 존재하면 1 추가한다  
+                fa[c] += 1
+            else:             # 키로 존재하지 않으면 1을 넣는다
+                fa[c] = 1
+    return fa
+
+
+
+     
+ret = getTextFreq('mydata.txt')
+
+ret = sorted(ret.items(), key=lambda x:x[1], reverse=True) # ret은 (문자,빈도수) 
+for c, freq in ret:
+    if c == '\n':   # 어렵다..
+        continue
+    print('[%c] -> [%d]회 나타남' %(c,freq)) 
+
+
+#%% 167 텍스트 파일에 있는 단어 개수 계산하기
+with open('mydata.txt','r') as f:
+    data = f.read()
+    tmp = data.split()          # split : 공백으로 구분
+    print('단어수:[%d]'%len(tmp))
 
 ##%% 180
-
-
-
-
-
-
-
-
-
-
 
 
 
