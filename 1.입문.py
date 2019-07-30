@@ -46,7 +46,7 @@ print(a+b)
 
 #%% 006 자료형 개념 배우기 *
 int_data = 1                      # 정수 선언
-float_data = 3.14                 # 실수 선언 
+float_data = 3.141                # 실수 선언 
 complex_data = 1+5j               # 복수수 선언
 str_data = 'I love python'        # 문자열 선언
 list_data = [1,2,3]               # 리스트 선언
