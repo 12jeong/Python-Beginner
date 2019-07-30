@@ -16,9 +16,9 @@ from numpy.random import normal
 
 #%% <<<입문>>>>
 #%% 001 대화식 모드
-print("안녕하세요?")
+print("안녕하세요!")
 
-#%% 002 텍스트에디터 
+#%% 002 텍스트에디터
 
 #%% 003 변수명 만들기
 # 변수명은 _ 또는 영문자로 시작
@@ -46,7 +46,7 @@ print(a+b)
 
 #%% 006 자료형 개념 배우기 *
 int_data = 1                      # 정수 선언
-float_data = 3.141                # 실수 선언 
+float_data = 3.141                # 실수 선언
 complex_data = 1+5j               # 복수수 선언
 str_data = 'I love python'        # 문자열 선언
 list_data = [1,2,3]               # 리스트 선언
@@ -72,7 +72,7 @@ print('#')
 #%% 008 들여쓰기 개념 배우기 ***
 # 실행 코드 구분을 괄호{}로 하지 않고 들여쓰기를 한다 (무조건)
 # 제어문(if,for,while)이나 함수이름, 클래스 이름의 긑을 ':'로 표시한다.
-# 가장 바깥쪽의 실행코드는 들여쓰기 없이 시작해야 한다.                                                                                                        
+# 가장 바깥쪽의 실행코드는 들여쓰기 없이 시작해야 한다.
 # 같은 제어문내의 실행코드는 들여쓰기 간격이 동일해야 한다.
 
 listdata = ['a','b','c']
@@ -81,7 +81,7 @@ if 'a' in listdata :
     print(listdata)
 else:
     print('a가 listdata에 존재하지 않습니다')
-    
+
 
 # error
 """
@@ -109,29 +109,29 @@ elif x<y:
     print('x가 y보다 작습니다')
 else:
     print('x가 y와 같습니다')
-    
+
 #%% 011 for문 개념 배우기1(for)
 # for문의 범위로 사용되는 것은 시퀀스 자료형 또는 반복 가능한 자료이어야 한다.
 # 문자열, 리스트나 튜플, 사전, range() 등
 scope = [1,2,3,4,5]
 for x in scope:
     print(x)
-    
+
 str1 = 'abcdef'
 for c in str1:
     print(c)
-    
+
 list1 = [1,2,3,4,5]
 for c in list1:
     print(c)
-    
-ascii_codes = {'a':97,'b':98,'c':99} 
+
+ascii_codes = {'a':97,'b':98,'c':99}
 for c in ascii_codes:
     print(c)
-    
+
 for c in range(10):
     print(c)
-    
+
 
 #%% 012 for문 개념 배우기2(for~continue~break)
 scope = [1,2,3,4,5]
@@ -146,22 +146,22 @@ for x in scope:
     print(x)
     if x>3: # 3의 다음 숫자까지 출력하고 멈춘다
         break
-    
+
 for x in scope:
     print(x)
     if x>=3:
         break # 3의 다음 숫자부터 멈춘다
-        
+
 #%% 013 for문 개념 배우기3(for~else)
 # 왜 안되지
-        
+
 scope=[1,2,3,]
 
 for x in scope:
     print(x)
     #break
 else:
-    print('Perfect')        
+    print('Perfect')
 
 
 #%% 014 while문 개념 배우기(while~continue~break)
@@ -173,17 +173,17 @@ while x<=10:
     print(x)
     if x>7:
         break     # while 구문 탈출
-    
+
 x=1
 total = 0
-while 1:    
+while 1:
     total = total + x
     if total > 100000 :
         print(x)
         print(total)
         break
     x=x+1
-    
+
 #%% 015 None 개념 배우기
 val = None
 condition = 1
