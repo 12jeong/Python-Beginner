@@ -16,14 +16,14 @@ from numpy.random import normal
 
 #%% <<<초급>>>
 #%% 016 정수형 자료 이해하기
-int_data = 10
+int_data = 11
 bin_data = 0b10  # 2진수
 oct_data = 0o10  # 8진수
 hex_data = 0x10  # 16진수
 long_data = 1234567890123456789
 print(int_data)
 print(bin_data)  # 10진수로 출력된다.
-print(oct_data) 
+print(oct_data)
 print(hex_data)
 print(long_data) # 정수형 상수의 최대값은 존재하지 않는다?
 
@@ -33,7 +33,7 @@ f2 = 3.14
 f3 = 1.56e3
 f4 = -0.7e4
 print(f1) # 소수로 표현한 값은 실수형 자료로 취급된다.
-print(f2) 
+print(f2)
 print(f3) # e는 10의 거듭제곱을 나타낸다.
 print(f4)
 
@@ -46,7 +46,7 @@ print(c1.imag) # 복소수의 허수부
 
 c2 = complex(2,-3)
 print(c2)
-    
+
 #%% 019 대입 연산자 이해하기(=)
 a=1
 b=2
@@ -88,8 +88,8 @@ while True:
    a=a+1
    if a==10000:
        break
-       
-   
+
+
 #%% 023 관계 연산자 이해하기
 x=1; y=2
 str1 = 'abc'; str2 = 'python'
@@ -124,7 +124,7 @@ print(hex(bit1 & bit2))       # 비트간 and 연산 : 0110 0000
 print(hex(bit1 | bit2))       # 비트간 or 연산  : 0110 0011
 print(hex(bit1 ^ bit2))       # 비트간 xor 연산 : 0000 0011 - 같으면0 다르면1
 print(hex(bit1 >> 1))         # 1만큼 오른쪽이동: 0101 1001
-print(hex(bit1 << 2))         # 2만큼 왼쪽이동  : 0001 1000 0100 
+print(hex(bit1 << 2))         # 2만큼 왼쪽이동  : 0001 1000 0100
 
 
 #%% 026 시퀀스 자료형 이해하기
@@ -135,15 +135,15 @@ strdata = 'abcde'
 listdata = [1,[2,3],'안녕']
 tupledata = (100,200,300)
 
-#%% 027 시퀀스 자료 인덱싱 이해하기 
+#%% 027 시퀀스 자료 인덱싱 이해하기
 # 인덱싱은 0부터 시작한다
 strdata = 'Time is money!'
-print(strdata[5]) 
+print(strdata[5])
 print(strdata[-1]) # 끝에서부터 1번째
 
 listdata = [1,2,[1,2,3]]
 print(listdata[0])
-print(listdata[-1]) 
+print(listdata[-1])
 print(listdata[2][-1])
 
 #%% 028 시퀀스 자료 슬라이싱 이해하기
@@ -272,7 +272,7 @@ def add_number(n1,n2):
 
 def add_txt(t1,t2):
     print(t1+t2)
-    
+
 ans = add_number(10,15)
 print(ans)
 
@@ -283,7 +283,7 @@ add_txt(txt1,txt2)
 #%% 040 함수인자이해하기  **
 def add_txt(t1,t2='파이썬'):
     print(t1+':'+t2)
-    
+
 add_txt('베스트')
 
 add_txt(t2='대한민국',t1='1등')
@@ -292,12 +292,12 @@ add_txt(t2='대한민국',t1='1등')
 # *args : 튜플, *kwargs : 사전
 def func1(*args):
     print(args)
-    
+
 def func2(width,height,**kwargs):
     print(kwargs)
-    
+
 func1()
-func1(3,5,1,5)    
+func1(3,5,1,5)
 func2(10,20)
 func2(10,20,depth=50,color='blue')
 
@@ -308,10 +308,10 @@ strdata = '전역변수'
 def func1():
     strdata='지역변수'
     print(strdata)
-    
+
 def func2(param):
     param = 1
-    
+
 def func3():
     global param
     param = 50
@@ -323,7 +323,7 @@ func2(param)
 print(param)
 func3()
 print(param)
-    
+
 #%% 042 함수 리턴값 이해하기(return)
 def reverse(x,y,z):
     return z,y,x        # 리턴값이 여러개인 경우에는 튜플로 리턴
@@ -343,7 +343,7 @@ print(r1);print(r2);print(r3)
 import time
 
 print('5초간 프로그램을 정지합니다')
-time.sleep(5) # time 모듈이 제공하는 sleep()함수 
+time.sleep(5) # time 모듈이 제공하는 sleep()함수
 print('5초가 지나갔습니다')
 
 # myplib.py에 있는 함수를 이용할 수 있다.
@@ -352,10 +352,10 @@ import myplib
 ret1 = myplib.add_txt('대한민국','1등')
 ret2 = myplib.reverse(1,2,3,)
 print(ret1)
-print(ret2) 
+print(ret2)
 
-#%%  ######### 044 파이썬 패키지 이해하기  
-# 파이썬 모듈을 계층적인 디렉터리 형태로 구성한 것 
+#%%  ######### 044 파이썬 패키지 이해하기
+# 파이썬 모듈을 계층적인 디렉터리 형태로 구성한 것
 
 
 #%% 049 클래스 이해하기 (class) *
@@ -368,7 +368,7 @@ class MyClass: # 클래스 정의
         print(self.var) # 첫번째 인자가 반드시 self로 시작되어야 한다.
                         # self는 이 클래스의 인스턴트 객체를 가리키는 참조자
 obj = MyClass()         # 클래스를 활용하려면 인스턴스 객체로 만들어야 한다. 호출하면 됨.
-print(obj.var)          
+print(obj.var)
 obj.sayHello()
 
 #%% 050 클래스 멤버와 인스턴스 멤버 이해하기
@@ -379,19 +379,19 @@ class MyClass:
         self.param2 = '하이'      # 클래스 매소드 안에서 slef와 함께 선언되는 변수 : 인스턴스 멤버
         print(param1)
         print(self.var)
-        
-obj = MyClass 
-print(obj.var) 
+
+obj = MyClass
+print(obj.var)
 obj.sayHello()                    # 안된다,,,
 
 #%% 051 클래스 메소드 이해하기
 class MyClass:
     def sayHello(self):
         print('안녕하세요')
-        
+
         def sayBye(self,name):
             print('%s! 다음에보자!'%name)
-            
+
 obj = MyClass()
 obj.sayHello()
 obj.sayBye('철수')               # 안된다,,,
@@ -405,7 +405,7 @@ try:
     print(param)
 except:
     print('예외가 발생했습니다!') # param이 정의되지 않은 변수이므로 예외를 발생시킴
-    
+
 #%% 056 예외처리이해하기 2(try~except~else)
 try:
     print('안녕하세요')
@@ -414,8 +414,8 @@ except:
     print('예외가 발생했습니다!')
 else:
     print('예외가 발생하지 않았습니다.')
-    
-    
+
+
 #%% 057 예외처리이해하기 3(try~except~finally)
 try:
     print('안녕하세요')
@@ -424,23 +424,21 @@ except:
     print('예외가 발생했습니다!')
 finally:
     print('무조건 실행하는 코드')
-    
+
 #%% 058 예외처리이해하기 4(try~except Exception as e)
 try:
     print(param)
 except Exception as e:
     print(e)                  # e: 예외 발생 내요이 담긴 변수... 자세한건 문서
-    
-    
+
+
 #%% 059 예외처리이해하기 5(try~except 특정 예외)
 import time
 count = 1
-try : 
+try :
     while True:
         print(count)
         count += 1
         time.sleep(0.5)
 except KeyboardInterrupt:
     print('사용자에 의해 프로그램이 중단되었습니다')  # ctrl+c
-    
-    
